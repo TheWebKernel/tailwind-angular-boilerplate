@@ -15,7 +15,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "outputPath": "dist/tailwind-bolerplate",
             "index": "src/index.html",
@@ -28,9 +28,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/tailwind.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "customWebpackConfig": {
+              "path": "custom-webpack.config.js"
+            }
           },
           "configurations": {
             "production": {
@@ -64,9 +68,12 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "tailwind-bolerplate:build"
+            "browserTarget": "tailwind-bolerplate:build",
+            "customWebpackConfig": {
+              "path": "custom-webpack.config.js"
+            }
           },
           "configurations": {
             "production": {
@@ -123,6 +130,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "tailwind-bolerplate"
+    }
+  },
+  "defaultProject": "tailwind-bolerplate",
+  "cli": {
+    "analytics": false
+  }
 }
