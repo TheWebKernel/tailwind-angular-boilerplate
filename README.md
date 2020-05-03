@@ -1,4 +1,4 @@
-# TailwindBolerplate
+# Tailwind Angular 9 Boilerplate
 
 Used @angular-builders/custom-webpack for compiling
 
