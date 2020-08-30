@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "tailwind-bolerplate": {
+    "tailwind-boilerplate": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "outputPath": "dist/tailwind-bolerplate",
+            "outputPath": "dist/tailwind-boilerplate",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -70,21 +70,21 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "tailwind-bolerplate:build",
+            "browserTarget": "tailwind-boilerplate:build",
             "customWebpackConfig": {
               "path": "custom-webpack.config.js"
             }
           },
           "configurations": {
             "production": {
-              "browserTarget": "tailwind-bolerplate:build:production"
+              "browserTarget": "tailwind-boilerplate:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "tailwind-bolerplate:build"
+            "browserTarget": "tailwind-boilerplate:build"
           }
         },
         "test": {
@@ -121,18 +121,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "tailwind-bolerplate:serve"
+            "devServerTarget": "tailwind-boilerplate:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "tailwind-bolerplate:serve:production"
+              "devServerTarget": "tailwind-boilerplate:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "tailwind-bolerplate",
+  "defaultProject": "tailwind-boilerplate",
   "cli": {
     "analytics": false
   }
